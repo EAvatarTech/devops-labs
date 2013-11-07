@@ -10,3 +10,6 @@
 [submodule "modules/jenkins"]
 	path = modules/jenkins
 	url = git@github.com:EAvatarTech/puppet-jenkins.git
+[submodule "modules/vertx"]
+	path = modules/vertx
+	url = git@github.com:EAvatarTech/puppet-vertx.git
