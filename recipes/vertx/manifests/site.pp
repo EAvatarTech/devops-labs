@@ -4,10 +4,14 @@ class { 'java':
 
 class { 'vertx':
     version => '2.0.2-final',
-    boot_modules => ['io.vertx~mod-web-server~2.0.0-final']
+    startup_modules => {
+     'io.vertx~mod-web-server' => { version => '2.0.0-final' },
+    }
 }
 
-#vertx::module { 'io.vertx~mod-web-server':
-#    version => '2.0.0-final',
-#    require => Class['vertx']
-#}
+$webdir = $vertx::params::webdir
+
+vertx::config {"io.vertx~mod-web-server":
+  content => "{\n    \"port\": 8080,\n    \"web_root\": \"$webdir\"\n  }"
+}
+

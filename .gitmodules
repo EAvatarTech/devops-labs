@@ -13,3 +13,6 @@
 [submodule "modules/vertx"]
 	path = modules/vertx
 	url = git@github.com:EAvatarTech/puppet-vertx.git
+[submodule "modules/concat"]
+	path = modules/concat
+	url = git@github.com:puppetlabs/puppetlabs-concat.git
